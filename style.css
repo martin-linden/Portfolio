@@ -1,0 +1,25 @@
+body {
+	margin: 0;
+}
+
+#main-landing-content {
+	background: #303541;
+	height: 100vh;
+}
+
+header {
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 30px;
+}
+
+#logo {
+	width: 45px;
+}
+
+#nav-bar {
+	width: 35px;
+}
