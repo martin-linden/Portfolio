@@ -3,8 +3,15 @@ body {
 }
 
 #main-landing-content {
+	font-family: Arial;
+	font-weight: lighter;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-wrap: wrap;
 	background: #303541;
 	height: 100vh;
+	overflow: hidden;
 }
 
 header {
@@ -12,14 +19,78 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	flex-wrap: wrap;
-	padding: 30px;
 }
 
 #logo {
-	width: 45px;
+	width: 50px;
 }
 
 #nav-bar {
-	width: 35px;
+	width: 45px;
+}
+
+#landing-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 300px;
+}
+
+#landing-text h3 {
+	font-size: 25px;
+	color: #b95e5d;
+	margin: 10px;
+}
+
+#landing-text h1 {
+	font-size: 50px;
+	color: white;
+	margin: 10px;
+}
+
+#landing-text h2 {
+	font-size: 15px;
+	color: white;
+	margin: 10px;
+}
+
+hr {
+	margin-top: 30px;
+}
+
+#social-media {
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	color: white;
+}
+
+#profile-picture {
+	max-width: 310px;
+	height: auto;
+}
+
+#view-profile {
+	display: flex;
+	justify-content: flex-end;
+}
+
+#view-profile h3 {
+	display: flex;
+	justify-content: flex-end;
+	color: white;
+}
+
+#nav-arrow {
+	width: 40px;
+	margin-left: 40px;
+}
+
+@media screen and (max-width: 600px) {
+	#profile-picture {
+		display: none;
+	}
 }
