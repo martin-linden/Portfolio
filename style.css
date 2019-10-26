@@ -28,6 +28,12 @@ header {
 	align-items: center;
 }
 
+#nav-container {
+	display: flex;
+	justify-content: flex-start;
+	margin-right: 1%;
+}
+
 #logo {
 	width: 50px;
 	margin-left: 1%;
@@ -39,12 +45,12 @@ header {
 }
 
 #landing-content {
-	margin-top: 6%;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	flex-wrap: wrap;
 	height: 50%;
+	margin-top: 6%;
 }
 
 #landing-text {
@@ -94,7 +100,7 @@ hr {
 }
 
 #view-profile {
-	margin-bottom: 2%;
+	margin-bottom: 3%;
 	margin-right: 2%;
 	display: flex;
 	justify-content: flex-end;
@@ -113,16 +119,12 @@ hr {
 }
 
 .dropdown {
-	height: 10vh;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	width: 80%;
-	margin: auto;
+	margin-right: 1%;
 }
 
 .projects {
-	position: relative;
+	display: flex;
+	justify-content: flex-end;
 }
 
 .projects ul {
@@ -130,13 +132,37 @@ hr {
 	position: absolute;
 	margin-top: 10px;
 	width: 200px;
-	height: 200px;
+	height: auto;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	flex-direction: column;
 	list-style: none;
 	border-radius: 5px;
+	opacity: 0;
+	pointer-events: none;
+	transform: translateY(-10px);
+	transition: all 0.4s ease;
+	margin-top: 30px;
+}
+
+li {
+	margin: 10px;
+}
+.projects button:focus + ul {
+	opacity: 1;
+	pointer-events: all;
+	transform: translateY(0);
+	color: #b95e5d;
+}
+
+button {
+	color: white;
+	background: #b95e5d00;
+	border: none;
+	font-size: larger;
+	margin-right: 40%;
+	outline: none;
 }
 
 .projects a {
@@ -161,5 +187,35 @@ hr {
 @media screen and (max-width: 469px) {
 	#landing-text h1 {
 		font-size: 200%;
+	}
+
+	#view-profile {
+		margin-right: 0%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: small;
+	}
+
+	#landing-content {
+		height: auto;
+		margin-top: 0%;
+	}
+
+	#nav-arrow {
+		width: 40px;
+		margin-left: 0%;
+	}
+}
+
+@media screen and (max-height: 500px) {
+	#landing-content {
+		margin-top: 0%;
+		height: auto;
+	}
+
+	#view-profile {
+		font-size: small;
 	}
 }
