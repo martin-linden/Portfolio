@@ -1,6 +1,8 @@
 * {
 	margin: 0;
 	padding: 0;
+	font-family: Avenir;
+	font-weight: 100;
 }
 
 a {
@@ -9,7 +11,6 @@ a {
 }
 
 #main-landing-content {
-	font-family: Arial;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -50,7 +51,6 @@ header {
 	align-items: center;
 	flex-wrap: wrap;
 	height: 50%;
-	margin-top: 6%;
 }
 
 #landing-text {
@@ -79,14 +79,6 @@ hr {
 	margin-top: 30px;
 }
 
-#social-media {
-	display: flex;
-	justify-content: space-around;
-	/* flex-wrap: wrap-reverse; */
-	color: white;
-	margin-left: 30%;
-	margin-right: 30%;
-}
 /* 
 #icon1 {
 	color: white;
@@ -178,6 +170,115 @@ button {
 	transform: rotate(90deg);
 }
 
+#about {
+	margin-top: 5%;
+	margin-bottom: 5%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap-reverse;
+}
+
+#about-image {
+	width: 400px;
+}
+
+#about-text {
+	width: 35%;
+}
+
+#about-text h1 {
+	font-size: 300%;
+	color: black;
+}
+
+#about-text h2 {
+	font-size: 140%;
+	color: black;
+	margin-top: 1%;
+	margin-bottom: 2%;
+}
+
+#about-text h3 {
+	font-size: 100%;
+	color: black;
+}
+
+#form-container {
+	display: flex;
+	justify-content: center;
+	color: #6c6d6d;
+	background: #f8f8f8;
+}
+#submission-form {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	width: 400px;
+	padding: 5%;
+}
+#submission-form h1 {
+	color: #2f3441;
+	align-self: center;
+}
+#submission-form label {
+	margin-top: 2%;
+	color: #6c6d6d;
+}
+
+#name,
+#email {
+	border: 1px solid #b7b7b7;
+	height: 30px;
+	background: white;
+	font-size: 15px;
+	border-radius: 2px;
+}
+
+#message {
+	border: 1px solid #b7b7b7;
+	height: 70px;
+	background: white;
+	font-size: 15px;
+	border-radius: 2px;
+}
+
+#send {
+	border: 0;
+	padding: 1%;
+	background: #2f3441;
+	margin-top: 3%;
+	align-self: flex-end;
+	border-radius: 2px;
+	color: white;
+	width: 50px;
+}
+
+footer {
+	background: #303541;
+	display: flex;
+	justify-content: space-around;
+}
+
+#social-media {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+}
+
+#navigate-back {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	color: white;
+}
+
+#go-back {
+	width: 45px;
+	transform: rotate(180deg);
+}
+
 @media screen and (max-width: 780px) {
 	#profile-picture {
 		display: none;
@@ -207,6 +308,10 @@ button {
 		width: 40px;
 		margin-left: 0%;
 	}
+
+	#about-image {
+		width: 300px;
+	}
 }
 
 @media screen and (max-height: 500px) {
@@ -215,7 +320,22 @@ button {
 		height: auto;
 	}
 
+	#landing-text h1 {
+		font-size: 270%;
+	}
+
 	#view-profile {
 		font-size: small;
+	}
+}
+
+@media screen and (max-width: 795px), screen and (max-height: 500px) {
+	#about-text {
+		width: 90%;
+		margin-top: 10%;
+	}
+
+	#about-image {
+		margin-top: 10%;
 	}
 }
