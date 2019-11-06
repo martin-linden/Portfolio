@@ -3,7 +3,10 @@
 <head>
     <script src="https://kit.fontawesome.com/455ba97d7e.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
+    <meta name="description" content="This is a portfolio website of a Front-end developer named Martin Lindén. He has great knowledge of HTML, CSS, JavaScript">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="front-end developer, coding, websites, portfolio, html, css, JavaScript">
+    <meta name="author" content="Martin Lindén">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Martin Lindén - Front-end Developer</title>
     <link rel="stylesheet" href="style.css">
@@ -11,13 +14,13 @@
 <body>
     <section id="main-landing-content">
         <header>
-            <img src="img/logo.svg" alt="" id="logo">
+            <img src="img/logo.svg" alt="Logotype" id="logo">
             <div class="dropdown">
                 <div class="projects">
-                    <button>MENU</button>
+                    <button class="hover">MENU</button>
                     <ul>
-                        <li><a href="#">Projects (coming soon) </a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Projects (in progress)</a></li>
+                        <li><a href="#form-container">contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -29,15 +32,15 @@
                 <h2>Beautiful & Functional Websites</h2>
                 <hr>
             </section>
-            <img src="img/profile.svg" alt="" id="profile-picture">
+            <img src="img/profile.svg" alt="Profile-of-Martin-Linden-smiling" id="profile-picture">
         </section>
         <nav id="view-profile">
-            <h3>VIEW PROFILE</h3>
-            <img src="img/nav-arrow.svg" id= nav-arrow alt="">
+            <a class="hover" href="#about"> <h3>VIEW PROFILE</h3></a>
+            <a href="#about"><img src="img/arrow.svg" id= nav-arrow alt="navigation-arrow-pointing-down"></a>
         </nav>
     </section>
-    <section id="about">
-        <img src="img/about.svg" alt="picture of programmer at desk" id="about-image">
+    <section class="content">
+        <img src="img/about.svg" alt="Programmer-at-desk" id="about-image">
         <article id="about-text">
             <h1>About</h1>
             <h2>I’m a front end developer & 3D generalist from Stockholm, Sweden</h2>
@@ -45,39 +48,30 @@
         </article>
     </section>
     <section id="form-container">
-        <form id="submission-form">
+        <form id="submission-form" onsubmit="return false">
             <h1>Contact</h1>
-            <label for="name">
-                Name
-            </label>
-            <input type="text" id="name">
-            
-            <label for="email">
-                Email
-            </label>
-            <input type="email" id="email">
-            
-            <label for="message">
-                Message
-            </label>
-            
-            <textarea id="message" id="message"></textarea>
-            
-            <input type="submit" value="send" id="send">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+            <p>Name must be and contain 2 - 30 letters</p>
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email">
+            <p>Email must be a valid address, e.g. me@mydomain.com (case sensitive)</p>
+            <label for="message">Message</label>
+            <textarea id="message"></textarea>
+            <input class="hover"  type="submit" value="send" id="send">
         </form>
     </section>
     <footer>
         <nav id="social-media">
-            <a href="https://github.com/martin-linden"> <i class="fab fa-github fa-2x hover"></i></a>
-            <a href="https://www.behance.net/martinlindaf8d"> <i class="fab fa-behance fa-2x hover" id="icon1"></i></a>
-            <a href="https://www.linkedin.com/in/martinlindensthlm/?locale=en_US"> <i class="fab fa-linkedin fa-2x hover"></i></a>
+            <a href="https://github.com/martin-linden"> <i class="fab fa-github fa-2x hover" title="This is a link to Martin Lindens github account"></i></a>
+            <a href="https://www.behance.net/martinlindaf8d"> <i class="fab fa-behance fa-2x hover" title="This is a link to Martin Lindens behance account" id="icon1"></i></a>
+            <a href="https://www.linkedin.com/in/martinlindensthlm/?locale=en_US"> <i class="fab fa-linkedin fa-2x hover" title="This is a link to Martin Lindens LinkedIn account"></i></a>
         </nav> 
         <nav id="navigate-back">
-            <h3>BACK TO TOP</h3>
-            <img src="img/nav-arrow.svg" id="go-back" alt="">
-        </nav>
-        
+            <a class="hover" href="#main-landing-content"><h3>BACK TO TOP</h3></a>
+            <a href="#main-landing-content"><img src="img/arrow.svg" id="go-back" alt="navigation-arrow-pointing-up"></a>
+        </nav>   
     </footer>
+    <script  src="app.js"></script>
 </body>
 </html>
-
