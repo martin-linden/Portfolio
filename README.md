@@ -1,6 +1,6 @@
 # My Portfolio
 
-A portfolio for my front end projects
+A portfolio landing page for my front end projects
 
 | Landing | About |
 | ---- | --------- | 
